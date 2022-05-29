@@ -17,4 +17,12 @@ CREATE TABLE carts(
 	price SMALLINT
 );
 
+INSERT INTO courses(title, price, img_url)
+VALUES 
+  ('Math Basics', 0, 'url'),
+  ('Math Advanced', 1, 'url'),
+  ('Programming Basics', 4, 'url'),
+  ('Cybersecurity', 10, 'url')
+
+
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA "public" TO courses_major;
