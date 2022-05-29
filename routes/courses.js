@@ -14,6 +14,7 @@ router.get('/courses', async (req, res) => {
   });
 });
 
+// FIXME crashed if inputed invalid image url
 router.get('/courses/:course_id', async (req, res) => {
   const courseId = req.params.course_id;
   const course = await Course.getById(courseId);
