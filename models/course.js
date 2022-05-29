@@ -27,6 +27,10 @@ class Course {
   static async edit(course) {
     await CourseQuery.edit(course);
   }
+
+  static async deleteById(id) {
+    await CourseQuery.deleteById(id);
+  }
 }
 
 module.exports = Course;

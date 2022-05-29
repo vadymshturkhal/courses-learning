@@ -83,6 +83,20 @@ class CourseQuery {
       process.exit(1);
     });
   }
+
+  static async deleteById(id) {
+    const forCourseDeletion = `
+      DELETE FROM carts
+      WHERE course_id=$1
+    `;
+
+    const value = [id];
+
+    await SQLMaster.sendQuery(forCourseDeletion, value).catch((err) => {
+      console.log("Can't delete the course,", err.message);
+      process.exit(1);
+    });
+  }
 }
 
 class CartQuery {

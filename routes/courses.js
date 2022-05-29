@@ -42,4 +42,8 @@ router.post('/courses/edit', async (req, res) => {
   await Course.edit(course);
 });
 
+router.post('/courses/remove', async (req, res) => {
+  await Course.deleteById(req.body.course_id);
+});
+
 module.exports = router;
