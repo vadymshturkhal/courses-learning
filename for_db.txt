@@ -1,0 +1,20 @@
+CREATE EXTENSION "uuid-ossp"; 
+
+DROP TABLE [IF EXIST] courses;
+DROP TABLE [IF EXIST] carts;
+
+CREATE TABLE courses (
+	course_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+	title TEXT,
+	price SMALLINT,
+	img_url TEXT
+);
+
+CREATE TABLE carts(
+	id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+	course_id uuid,
+	course_quantity SMALLINT,
+	price SMALLINT
+);
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA "public" TO courses_major;
