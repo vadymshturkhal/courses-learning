@@ -26,3 +26,15 @@ VALUES
 
 
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA "public" TO courses_major;
+
+// chown -R postgres:postgres path_to_db;
+
+# psql
+sudo -i -u postgres
+psql
+GRANT CONNECT ON DATABASE express_db TO courses_major;
+\q
+psql -d express_db;
+GRANT ALL ON ALL TABLES IN SCHEMA "public" TO courses_major;
+\q
+CTRL + D

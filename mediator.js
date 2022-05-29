@@ -1,6 +1,5 @@
 'use strict';
 
-// FIXME bug with quotes when add the course
 const { Pool } = require('pg');
 
 const CREDENTIAL = {
@@ -86,7 +85,7 @@ class CourseQuery {
 
   static async deleteById(id) {
     const forCourseDeletion = `
-      DELETE FROM carts
+      DELETE FROM courses
       WHERE course_id=$1
     `;
 
