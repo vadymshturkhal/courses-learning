@@ -17,6 +17,13 @@ CREATE TABLE carts(
 	price SMALLINT
 );
 
+CREATE TABLE users(
+	user_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+	name TEXT, 
+	email TEXT,
+	cart_id UUID
+);
+
 INSERT INTO courses(title, price, img_url)
 VALUES 
   ('Math Basics', 0, 'https://i0.wp.com/calmatters.org/wp-content/uploads/2021/08/math-curriculum.jpg?fit=1200%2C900&ssl=1'),

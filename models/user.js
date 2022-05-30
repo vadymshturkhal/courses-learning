@@ -2,15 +2,9 @@
 
 const { CartQuery } = require('../mediator');
 
-// FIXME need to isolate for all users
-
-class Cart {
+class User {
   static async add(course) {
     await CartQuery.addCourseById(course.course_id);
-  }
-
-  static async reduceQuantity(id) {
-    
   }
 
   static async remove(id) {
@@ -29,4 +23,4 @@ class Cart {
   }
 }
 
-module.exports = Cart;
+module.exports = User;

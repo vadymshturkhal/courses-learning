@@ -157,6 +157,10 @@ class CartQuery {
     });
   }
 
+  static async reduceQuantityById(courseId) {
+    
+  }
+
   static async #getCourseFromCartById(courseId) {
     const forFetch = `
       SELECT course_quantity, price
@@ -214,7 +218,12 @@ class CartQuery {
   }
 }
 
+class UserQuery {
+
+}
+
 module.exports = {
   CourseQuery,
   CartQuery,
+  UserQuery,
 };

@@ -1,0 +1,4 @@
+Add more courses when press button BUY COURSE.
+Reduce quantity of courses in cart.
+Create model for user.
+Add session for users.
