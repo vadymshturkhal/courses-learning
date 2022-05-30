@@ -26,7 +26,6 @@ router.get('/cart', async (req, res) => {
 router.delete('/cart/remove/:id', async (req, res) => {
   const cart = await Cart.remove(req.params.id);
   const totalCartPrice = await Cart.fetchTotalPrice();
-  // return res.json(cart);
   const data = {
     price: totalCartPrice,
     courses: cart,
