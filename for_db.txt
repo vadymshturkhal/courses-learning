@@ -14,7 +14,8 @@ CREATE TABLE carts(
 	id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
 	course_id uuid,
 	course_quantity SMALLINT,
-	price SMALLINT
+	price SMALLINT,
+	user_id uuid
 );
 
 CREATE TABLE users(

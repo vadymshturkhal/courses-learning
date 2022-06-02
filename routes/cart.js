@@ -10,6 +10,7 @@ router.post('/cart/add', async (req, res) => {
   const courseId = req.body.course_id;
   const course = await Course.getById(courseId);
   await Cart.add(course);
+  res.sendStatus(204);
 });
 
 router.get('/cart', async (req, res) => {

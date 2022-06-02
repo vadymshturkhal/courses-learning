@@ -9,10 +9,6 @@ class Cart {
     await CartQuery.addCourseById(course.course_id);
   }
 
-  static async reduceQuantity(id) {
-    
-  }
-
   static async remove(id) {
     await CartQuery.removeCourseById(id);
     return await CartQuery.getAllCourses();
