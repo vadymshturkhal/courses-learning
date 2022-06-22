@@ -1,38 +1,43 @@
 <nav>
-  <div class="nav-wrapper card-panel teal lighten-2">
-    <a href="#" class="brand-logo">Courses</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+  <div class='nav-wrapper card-panel teal lighten-2'>
+    <a href='#' class='brand-logo'>Courses</a>
+    <ul id='nav-mobile' class='right hide-on-med-and-down'>
 
       {{#if isHome}}
-        <li class="active"><a href="/">Main</a></li>
+        <li class='active'><a href='/'>Main</a></li>
       {{else}}
-        <li><a href="/">Main</a></li>
+        <li><a href='/'>Main</a></li>
       {{/if}}
 
       {{#if isCourses}}
-        <li class="active"><a href="/">Courses</a></li>
+        <li class='active'><a href='/'>Courses</a></li>
       {{else}}
-        <li><a href="/courses">Courses</a></li>
+        <li><a href='/courses'>Courses</a></li>
       {{/if}}
 
       {{#if isAddCourse}}
-        <li class="active"><a href="/add_course">Add Course</a></li>
+        <li class='active'><a href='/add_course'>Add Course</a></li>
       {{else}}
-        <li><a href="/add_course">Add Course</a></li>
+        <li><a href='/add_course'>Add Course</a></li>
       {{/if}}
 
       {{#if isAbout}}
-        <li class="active"><a href="/about">About</a></li>
+        <li class='active'><a href='/about'>About</a></li>
       {{else}}
-        <li><a href="/about">About</a></li>
+        <li><a href='/about'>About</a></li>
       {{/if}}
 
       {{#if isCart}}
-        <li class="active"><a href="/cart">Cart</a></li>
+        <li class='active'><a href='/cart'>Cart</a></li>
       {{else}}
-        <li><a href="/cart">Cart</a></li>
+        <li><a href='/cart'>Cart</a></li>
       {{/if}}
-  
+
+      {{#if isLogin}}
+        <li class='active'><a href='/auth/login'>Log in</a></li>
+      {{else}}
+        <li><a href='/auth/login'>Log in</a></li>
+      {{/if}}
     </ul>
   </div>
 </nav>

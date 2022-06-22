@@ -15,7 +15,11 @@
         {{#each cart}}
         <tr>
           <td>{{this.title}}</td>
-          <td>{{this.course_quantity}}</td>
+            <td>
+              <a class="waves-effect waves-light btn-small">-</a>
+              {{this.course_quantity}}
+              <a class="waves-effect waves-light btn-small">+</a>
+            </td>
           <td>{{this.price}}</td>
           <td><button class="btn btn-small cart-remove" data-id="{{this.course_id}}">Delete</button></td>
         </tr>
